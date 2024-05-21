@@ -33,9 +33,7 @@ This doc contains commands for establishing connections to the warehouse and cre
 #### etl.py
 This doc contains commands for establishing connections to the warehouse, loading data into staging tables and inserting data from staging tables into the dimensional tables
 
-## Example Analysis carried out in Warehouse
-1. Who are our top 10 users?
-   
+
 
 
 

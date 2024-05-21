@@ -69,10 +69,7 @@ CREATE TABLE songplays
     session_id INT NOT NULL,
     location VARCHAR(256) NOT NULL,
     user_agent VARCHAR(256) NOT NULL
-)
-DISTSTYLE KEY
-DISTKEY ( start_time )
-SORTKEY ( start_time );
+);
 """)
 
 user_table_create = ("""
@@ -83,9 +80,7 @@ CREATE TABLE users
     last_name VARCHAR(256) NOT NULL,
     gender VARCHAR(64) NOT NULL,
     level VARCHAR(8) NOT NULL
-)
-DISTSTYLE ALL
-SORTKEY ( user_id );
+);
 """)
 
 
@@ -97,9 +92,7 @@ CREATE TABLE songs
     artist_id VARCHAR(20) NOT NULL,
     year INTEGER NOT NULL,
     duration FLOAT NOT NULL
-)
-DISTSTYLE ALL
-SORTKEY ( song_id );
+);
 """)
 
 artist_table_create = ("""
@@ -110,9 +103,7 @@ CREATE TABLE artists
     location VARCHAR(256),
     latitude FLOAT,
     longitude FLOAT
-)
-DISTSTYLE ALL
-SORTKEY ( artist_id );
+);
 """)
 
 time_table_create = ("""
@@ -125,10 +116,7 @@ CREATE TABLE time
     month INTEGER NOT NULL,
     year INTEGER NOT NULL,
     weekday VARCHAR(9) ENCODE BYTEDICT NOT NULL
-)
-DISTSTYLE KEY
-DISTKEY ( start_time )
-SORTKEY ( start_time );
+);
 """)
 
 # STAGING TABLES
